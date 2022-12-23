@@ -29,6 +29,8 @@ namespace Math.Formulae
             Console.WriteLine(authorName);
 
             obj.Quit(10);
+
+            obj.Quit(20);
         }
     }
 }
