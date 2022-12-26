@@ -19,28 +19,36 @@ namespace Maveric.Runner
             Employee emp3 = new Employee();
             Employee emp4 = new Employee();
 
+
             emp1.empId = 101;
             emp1.empName = "Saul";
-            emp1.empSalary = 9000;
+            emp1.empSalary = -9000;
+            emp1.empPerformanceType = 'B';
 
             emp2.empId = 102;
             emp2.empName = "Kim";
             emp2.empSalary = 12000.2;
+            emp2.empPerformanceType = 'A';
 
             emp3.empId = 103;
             emp3.empName = "Jack";
             emp3.empSalary = 6000.2;
+            emp3.empPerformanceType = 'C';
 
 
             Employee.companyName = "Maveric Company";
 
 
+            emp1.PrintEmployeeDetail();
             emp2.PrintEmployeeDetail();
-
             emp3.PrintEmployeeDetail();
 
-            emp4.PrintEmployeeDetail();
+            //   emp4.PrintEmployeeDetail();
 
+            emp1.DisplayGrossSalaryWithBonus();
+            emp2.DisplayGrossSalaryWithBonus();
+            emp3.DisplayGrossSalaryWithBonus();
+            emp4.DisplayGrossSalaryWithBonus();
 
         }
 
