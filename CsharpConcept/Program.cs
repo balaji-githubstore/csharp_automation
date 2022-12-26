@@ -1,6 +1,6 @@
 ﻿
 
-using Math.AreaFormulae;
+using Math1.AreaFormulae;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +14,14 @@ namespace Maveric.CsharpConcept
     {
         static void Main(string[] args)
         {
+           double result= Math.Sqrt(64);
+            Console.WriteLine(result);
+
+            result = Math.Pow(3, 3);
+            Console.WriteLine(result);
+
+            Console.WriteLine(Math.PI);
+           
             //10,20,30,40,50
 
             int[] numbers = new int[5];  //5*32 bits of memory 
@@ -55,6 +63,9 @@ namespace Maveric.CsharpConcept
             string[] fruits = { "mango", "orange", "apple" };
 
             Console.WriteLine(fruits[2]);
+
+
+            
         }
     }
 }

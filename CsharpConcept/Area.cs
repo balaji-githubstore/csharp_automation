@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Math.AreaFormulae
+namespace Math1.AreaFormulae
 {
     public class Area
     {

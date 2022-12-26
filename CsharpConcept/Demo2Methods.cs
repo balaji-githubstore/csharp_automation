@@ -1,6 +1,6 @@
 ﻿
 
-using Math.AreaFormulae;
+using Math1.AreaFormulae;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -31,6 +31,12 @@ namespace Math.Formulae
             obj.Quit(10);
 
             obj.Quit(20);
+
+            obj.Quit(50);
+
+            
+
+            
         }
     }
 }
