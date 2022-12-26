@@ -76,5 +76,11 @@ namespace EmployeeProject
             }
             Console.WriteLine("-----------------------------------------------");
         }
+
+        //public static Employee GetEmployeeInstance()
+        //{
+        //    Employee employee = new Employee();
+        //    return employee;
+        //}
     }
 }
