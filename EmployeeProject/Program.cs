@@ -6,7 +6,7 @@ namespace Maveric.Runner
     public class Program
     {
 
-        static void Main(string[] args) 
+        static void Main(string[] args)
         {
             Console.WriteLine("************EMPLOYEE DASHBORD*****************");
 
@@ -14,9 +14,10 @@ namespace Maveric.Runner
             Employee.companyLocation = "Chennai";
 
 
-            Employee emp1=new Employee();
-            Employee emp2=new Employee();
-
+            Employee emp1 = new Employee();
+            Employee emp2 = new Employee();
+            Employee emp3 = new Employee();
+            Employee emp4 = new Employee();
 
             emp1.empId = 101;
             emp1.empName = "Saul";
@@ -26,15 +27,21 @@ namespace Maveric.Runner
             emp2.empName = "Kim";
             emp2.empSalary = 12000.2;
 
-            
+            emp3.empId = 103;
+            emp3.empName = "Jack";
+            emp3.empSalary = 6000.2;
 
 
             Employee.companyName = "Maveric Company";
 
-            Console.WriteLine(emp1.empId);
 
-            Console.WriteLine(emp2.empId);
-       
+            emp2.PrintEmployeeDetail();
+
+            emp3.PrintEmployeeDetail();
+
+            emp4.PrintEmployeeDetail();
+
+
         }
 
     }
