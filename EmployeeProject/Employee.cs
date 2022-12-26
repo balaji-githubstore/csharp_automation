@@ -16,18 +16,20 @@ namespace EmployeeProject
         public static string companyLocation;
 
 
-        public double EmpSalary
+        public double EmployeeSalary
         {
-            get {
+            get
+            {
                 //read
                 return _empSalary;
             }
+
             set
             {
                 //write
-                if(value>3000)
+                if (value > 3000)
                 {
-                    _empSalary= value;
+                    _empSalary = value;
                 }
                 else
                 {
@@ -40,12 +42,12 @@ namespace EmployeeProject
 
         public void PrintEmployeeDetail()
         {
-            Console.WriteLine("Employee Id: "+empId);
-            Console.WriteLine("Employee Name: "+empName);
-            Console.WriteLine("Employee Salary: "+_empSalary);
-            Console.WriteLine("Employee Performance type: "+empPerformanceType);
-            Console.WriteLine("Company Name: "+Employee.companyName);
-            Console.WriteLine("Company Location: "+Employee.companyLocation);
+            Console.WriteLine("Employee Id: " + empId);
+            Console.WriteLine("Employee Name: " + empName);
+            Console.WriteLine("Employee Salary: " + _empSalary);
+            Console.WriteLine("Employee Performance type: " + empPerformanceType);
+            Console.WriteLine("Company Name: " + Employee.companyName);
+            Console.WriteLine("Company Location: " + Employee.companyLocation);
             Console.WriteLine("-----------------------------------------------");
         }
 
@@ -53,20 +55,20 @@ namespace EmployeeProject
         public void DisplayGrossSalaryWithBonus()
         {
             Console.WriteLine("Employee Id: " + empId);
-            if (empPerformanceType=='A')
+            if (empPerformanceType == 'A')
             {
                 Console.WriteLine("25%");
-                Console.WriteLine(empSalary + (empSalary * 25 / 100));
+                Console.WriteLine(_empSalary + (_empSalary * 25 / 100));
             }
-            else if(empPerformanceType=='B')
+            else if (empPerformanceType == 'B')
             {
                 Console.WriteLine("15%");
-                Console.WriteLine(empSalary + (empSalary * 15 / 100));
+                Console.WriteLine(_empSalary + (_empSalary * 15 / 100));
             }
-            else if(empPerformanceType=='C')
+            else if (empPerformanceType == 'C')
             {
                 Console.WriteLine("10%");
-                Console.WriteLine(empSalary + (empSalary * 10 / 100));
+                Console.WriteLine(_empSalary + (_empSalary * 10 / 100));
             }
             else
             {
