@@ -22,6 +22,7 @@ namespace ShoppingCartProject
         public Item(int _quantity)
         {
             this._quantity = _quantity;
+            Console.WriteLine("Launching the browser");
         }
 
         //public Item(int _quantity, string description)
