@@ -9,18 +9,18 @@
 
   <ItemGroup>
     <Compile Remove="Demo1Basics.cs" />
+    <Compile Remove="Facebook.cs" />
     <Compile Remove="GuruDemo.cs" />
     <Compile Remove="ParaBankTest.cs" />
     <Compile Remove="Program.cs" />
-    <Compile Remove="SalesforceApp.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Demo1Basics.cs" />
+    <None Include="Facebook.cs" />
     <None Include="GuruDemo.cs" />
     <None Include="ParaBankTest.cs" />
     <None Include="Program.cs" />
-    <None Include="SalesforceApp.cs" />
   </ItemGroup>
 
   <ItemGroup>

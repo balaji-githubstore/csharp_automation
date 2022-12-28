@@ -19,12 +19,14 @@ namespace SeleniumConcept
 
             driver.Url = "https://www.facebook.com/";
 
-            driver.FindElement(By.LinkText("Create New Account123")).Click();
+            driver.FindElement(By.LinkText("Create New Account")).Click();
 
             driver.FindElement(By.Name("firstname")).SendKeys("jack");
 
             //radio button 
-            //will start at 5:15 PM IST
+            //driver.FindElement(By.XPath("//input[@value='-1']")).Click();
+            
+            driver.FindElement(By.XPath("//label[text()='Custom']")).Click();
         }
     }
 }

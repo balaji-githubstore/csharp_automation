@@ -17,9 +17,9 @@ namespace SeleniumConcept
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
 
-            driver.Url = "https://www.salesforce.com/in/form/signup/freetrial-sales/"; //wait for the page load to complete
+            driver.Url = "https://www.salesforce.com/in/form/signup/freetrial-sales/?d=70130000000Enyk"; //wait for the page load to complete
 
-            driver.FindElement(By.Name("UserFirstName12345")).SendKeys("jack"); //FindElement checks for presence of element in 0.5s 
+            driver.FindElement(By.Name("UserFirstName")).SendKeys("jack"); //FindElement checks for presence of element in 0.5s 
             driver.FindElement(By.Name("UserLastName")).SendKeys("wick");
 
             driver.FindElement(By.XPath("//input[contains(@id,'UserEma')]")).SendKeys("jack@gm.com");
@@ -37,9 +37,14 @@ namespace SeleniumConcept
             SelectElement selectCont = new SelectElement(driver.FindElement(By.Name("CompanyCountry")));
             selectCont.SelectByText("United Kingdom");
 
-          
 
             //click on terms and condition checkbox
+            driver.FindElement(By.XPath("//div[@class='checkbox-ui']")).Click();
+
+            driver.FindElement(By.Name("start my free trial")).Click();
+
+            string actual_error = driver.FindElement(By.XPath("//span[contains(text(),'valid phone')]")).Text;
+            Console.WriteLine(actual_error);
         }
     }
 }
