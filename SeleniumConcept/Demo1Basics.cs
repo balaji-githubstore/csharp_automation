@@ -12,6 +12,8 @@ namespace SeleniumConcept
         {
 
             IWebDriver driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
 
             driver.Url = "https://github.com/login"; //set //navigate to the url
 

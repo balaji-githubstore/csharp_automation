@@ -15,9 +15,11 @@ namespace SeleniumConcept
 
             driver.Url = "https://github.com/login";
 
-            //By usernameLocator = By.Id("login_field");
-            //IWebElement element = driver.FindElement(usernameLocator);
-            //element.SendKeys("hello@gmail.com");
+            By usernameLocator = By.Id("login_field");
+
+            IWebElement element = driver.FindElement(usernameLocator);
+
+            element.SendKeys("hello@gmail.com");
 
 
             driver.FindElement(By.Id("login_field")).SendKeys("jacl@gmail.com");
