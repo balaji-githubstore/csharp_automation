@@ -8,6 +8,8 @@ namespace Maveric.Runner
 
         static void Main(string[] args)
         {
+
+         
             Console.WriteLine("************EMPLOYEE DASHBORD*****************");
 
             Employee.companyName = "Maveric";
@@ -56,6 +58,49 @@ namespace Maveric.Runner
 
             //read the EmployeeSalary property
             Console.WriteLine(emp3.EmployeeSalary);
+
+            Console.WriteLine("----------------------------");
+            Employee hEmp=Employee.getHighPaidEmployeeDetail(emp3, emp1);
+            hEmp.PrintEmployeeDetail();
+
+
+            Console.WriteLine("----------------------------");
+            Employee.getHighPaidEmployeeDetail(emp3, emp1).PrintEmployeeDetail();
+
+
+            string[] names = new string[5];
+            names[0] = "jack";
+            names[1] = "john";
+            names[2] = "kim";
+
+            for(int i=0;i<names.Length;i++)
+            {
+                Console.WriteLine(names[i]);
+            }
+
+            foreach(string name in names)
+            {
+                Console.WriteLine(name);
+            }
+
+            Employee[] employees = new Employee[3];
+            employees[0] = emp1;
+            employees[1] = emp2;
+            employees[2] = emp3;
+
+            //for (int i=0;i<employees.Length;i++)
+            //{
+            //    Console.WriteLine(employees[i].empId);
+            //    Console.WriteLine(employees[i].empName);
+            //}
+
+            //foreach(Employee emp  in employees)
+            //{
+            //    Console.WriteLine(emp.empId);
+            //    Console.WriteLine(emp.empName);
+            //}
+
+            Employee.PrintAllEmployees(employees);
 
         }
 

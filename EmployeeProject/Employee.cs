@@ -15,6 +15,29 @@ namespace EmployeeProject
         public static string companyName; //static variable or class variable 
         public static string companyLocation;
 
+        //create similar method for student type and item type 
+        public static void PrintAllEmployees(Employee[] employees)
+        {
+            foreach (Employee emp in employees)
+            {
+                emp.PrintEmployeeDetail();
+                //Console.WriteLine(emp.empId);
+                //Console.WriteLine(emp.empName);
+                //Console.WriteLine("--------------------------");
+            }
+        }
+
+        public static Employee getHighPaidEmployeeDetail(Employee e1, Employee e2)
+        {
+            if (e1.EmployeeSalary > e2.EmployeeSalary)
+            {
+                return e1;
+            }
+            else
+            {
+                return e2;
+            }
+        }
 
         public double EmployeeSalary
         {
