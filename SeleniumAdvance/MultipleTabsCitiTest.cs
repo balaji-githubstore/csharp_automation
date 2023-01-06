@@ -64,6 +64,7 @@ namespace Maveric.SeleniumAdvance
 
             //date field - approac 2 - use javascript to enter
             driver.ExecuteJavaScript("document.querySelector('#bill-date-long').value='14/04/2000'");
+
             driver.FindElement(By.CssSelector("[value='PROCEED']")).Click();
 
             string actualError=driver.FindElement(By.XPath("//li[contains(text(),'accept Terms')]")).Text;
