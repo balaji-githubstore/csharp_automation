@@ -35,5 +35,17 @@ namespace SeleniumAdvance
 
             driver.FindElement(By.XPath("//input[@type='file']")).SendKeys(@"C:\Mine\Balaji-Profile_2022.pdf");
         }
+
+        [Test]
+        public void DSemoTest()
+        {
+            IWebDriver driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+            driver.Url = "file:///C:/Mine/Html/demo1.html";
+
+            driver.FindElement(By.XPath("//input[@type='file']")).SendKeys(@"C:\Mine\Balaji-Profile_2022.pdf");
+        }
     }
 }

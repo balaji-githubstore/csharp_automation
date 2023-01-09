@@ -49,8 +49,15 @@ namespace Maveric.SeleniumAdvance
             driver.FindElement(By.XPath("//input[@value='Confirm Create New Patient']")).Click();
             driver.SwitchTo().DefaultContent();
 
-            Thread.Sleep(30000);
-            string alerttext = driver.SwitchTo().Alert().Text;
+            //Thread.Sleep(30000);
+
+            DefaultWait<IWebDriver> wait = new DefaultWait<IWebDriver>(driver);
+            wait.Timeout = TimeSpan.FromSeconds(50);
+            wait.IgnoreExceptionTypes(typeof(Exception));
+
+
+            //string alerttext = driver.SwitchTo().Alert().Text;
+            string alerttext = wait.Until(x => x.SwitchTo().Alert()).Text;
             Console.WriteLine(alerttext);
             driver.SwitchTo().Alert().Accept();
     
